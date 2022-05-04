@@ -1,8 +1,8 @@
 import { StatusBar, StyleSheet, Text, SafeAreaView, Image, Dimensions, View} from 'react-native';
-import { color } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 import arthas from './assets/arthas.png'
 import alianca from './assets/alianca.png'
+import Topo from './source/telas/Menu/Topo';
 
 
 const width = Dimensions.get('screen').width;
@@ -12,10 +12,7 @@ const width = Dimensions.get('screen').width;
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Image style={styles.arthas} source={arthas}/>
-
-
-      <Text style={styles.nome}>Arthas Menetil</Text>
+      <Topo/>
 
       <Text style={styles.frase}>I would gladly bear any curse to save my homeland</Text>
       <View style={styles.historia}>
@@ -34,17 +31,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     
-  },
-  arthas:{
-      width:"100%",
-      height:582/772 * width
-  },
-  
-  nome:{
-    textAlign:"center",
-    fontWeight:"bold",
-    fontSize: 25,
-    lineHeight:35
   },
   frase:{
     color:"#ff1100",
